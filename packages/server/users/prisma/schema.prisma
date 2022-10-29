@@ -17,20 +17,22 @@ model User {
     email     String   @unique
     password  String
     permision String   @default("user")
+    createAt  DateTime @default(now())
     Resume    Resume[]
 }
 
 model Resume {
-    id             String  @id @default(uuid())
-    cpf            Int     @unique
-    birthDate      Int
+    id             String   @id @default(uuid())
+    cpf            String   @unique
+    birthDate      String
     sex            String
     civilState     String
     schooling      String
     specialization String?
     company        String?
     office         String?
-    wage           Int
+    wage           String
     userId         String
-    user           User    @relation(fields: [userId], references: [id])
+    createAt       DateTime @default(now())
+    user           User     @relation(fields: [userId], references: [id])
 }

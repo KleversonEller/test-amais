@@ -5,22 +5,24 @@ CREATE TABLE "User" (
     "lastName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "permision" TEXT NOT NULL DEFAULT 'user'
+    "permision" TEXT NOT NULL DEFAULT 'user',
+    "createAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- CreateTable
 CREATE TABLE "Resume" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "cpf" INTEGER NOT NULL,
-    "birthDate" INTEGER NOT NULL,
+    "cpf" TEXT NOT NULL,
+    "birthDate" TEXT NOT NULL,
     "sex" TEXT NOT NULL,
     "civilState" TEXT NOT NULL,
     "schooling" TEXT NOT NULL,
     "specialization" TEXT,
     "company" TEXT,
     "office" TEXT,
-    "wage" INTEGER NOT NULL,
+    "wage" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
+    "createAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT "Resume_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
