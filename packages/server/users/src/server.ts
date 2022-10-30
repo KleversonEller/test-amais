@@ -4,14 +4,16 @@ import cors from 'cors';
 import 'express-async-errors';
 
 import middlewareError from '@middleware/error.middleware';
-import router from './routes/user.routes';
+import routerUser from './routes/user.routes';
+import routerResume from './routes/resume.routes';
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-app.use(router);
+app.use(routerUser);
+app.use(routerResume);
 
 app.use(middlewareError);
 
