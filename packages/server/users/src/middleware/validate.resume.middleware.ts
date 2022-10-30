@@ -27,7 +27,6 @@ export default class ResumeValidate {
 		}).validate(data);
 
 		if (error) {
-			console.log(error);
 			throw new PersonalError(StatusCodes.BAD_REQUEST, 'All fields must be filled');
 		}
 	}
