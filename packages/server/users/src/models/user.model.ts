@@ -8,11 +8,17 @@ import type IUser from 'src/interfaces/user.interface';
  * @function UserModel
  * ? Classe responsável por fazer conexão e requisições para o banco de dados
  *
- * @method UserModel.getUser
- * ? Método responsável pela requisição de um usuário ja cadastrado
- *
  * @method UserModel.newUserAndResume
  * ? Método responsável pela criação de um novo usuário e seu currículo
+ *
+ * @method UserModel.newUser
+ * ? Método responsável pela criação de um novo usuário
+ *
+ * @method UserModel.login
+ * ? Método responsável pela validação de um usuário
+ *
+ * @method UserModel.getUser
+ * ? Método responsável pela requisição de um usuário ja cadastrado
  *
  * @method UserModel.getUserAndResume
  * ? Método responsável pela requisição de um usuário ja cadastrado e seu currículo
