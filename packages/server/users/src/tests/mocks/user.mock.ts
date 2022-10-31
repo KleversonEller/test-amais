@@ -54,6 +54,9 @@ export const mockResume = {
 	sex: 'não-binário',
 	civilState: 'solteiro',
 	schooling: 'doutorado',
+	specialization: null,
+	company: null,
+	office: null,
 	wage: '1',
 };
 

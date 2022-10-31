@@ -44,9 +44,9 @@ export default class ResumeController {
 	}
 
 	public async updateResume(req: Request, res: Response): Promise<Response> {
-		const {id} = req.headers;
+		const {id} = req.params;
 
-		const result = await this._service.updateResume(req.body, id as string);
+		const result = await this._service.updateResume(req.body, id);
 
 		return res.status(StatusCodes.OK).json(result);
 	}

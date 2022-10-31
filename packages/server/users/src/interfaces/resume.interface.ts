@@ -5,9 +5,9 @@ type IResume = {
 	sex: string;
 	civilState: string;
 	schooling: string;
-	specialization?: string;
-	company?: string;
-	office?: string;
+	specialization?: string | undefined;
+	company?: string | undefined;
+	office?: string | undefined;
 	wage: string;
 };
 export default IResume;
