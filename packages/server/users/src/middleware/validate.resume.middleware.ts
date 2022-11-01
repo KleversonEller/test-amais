@@ -20,9 +20,9 @@ export default class ResumeValidate {
 			sex: Joi.string().required(),
 			civilState: Joi.string().required(),
 			schooling: Joi.required(),
-			specialization: Joi.required(),
-			company: Joi.required(),
-			office: Joi.required(),
+			specialization: [Joi.string().optional(), Joi.allow(null)],
+			company: [Joi.string().optional(), Joi.allow(null)],
+			office: [Joi.string().optional(), Joi.allow(null)],
 			wage: Joi.string().required(),
 		}).validate(data);
 

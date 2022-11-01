@@ -44,7 +44,7 @@ export default class UserValidate {
 			name: Joi.string().required(),
 			lastName: Joi.string().required(),
 			email: Joi.string().required().email(),
-			password: Joi.string().required(),
+			password: Joi.string().required().min(4),
 			permision: Joi.string(),
 		}).validate(data);
 
