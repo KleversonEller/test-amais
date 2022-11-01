@@ -50,4 +50,28 @@ type IUpdate = {
 	wage: string | undefined;
 };
 
-export type {IUserInfo, IResumeInfo, IUpdate};
+type IAllInfos = {
+	id: string;
+	cpf: string;
+	birthDate: string;
+	sex: string;
+	civilState: string;
+	schooling: string;
+	specialization: string | undefined;
+	company: string | undefined;
+	office: string | undefined;
+	wage: string;
+	userId: string;
+	createAt: string;
+	user: {
+		id: string;
+		name: string;
+		lastName: string;
+		email: string;
+		password: string;
+		permision: string;
+		createAt: string;
+	};
+};
+
+export type {IUserInfo, IResumeInfo, IUpdate, IAllInfos};
