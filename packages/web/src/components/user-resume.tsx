@@ -62,8 +62,7 @@ function UserResume() {
 					</td>
 					<td>
 						<span className='font-bold mr-2'>Pretensão Salarial:</span>
-						{Number(resume?.wage)
-							.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}
+						{resume?.wage}
 					</td>
 				</tr>
 			</tbody>
