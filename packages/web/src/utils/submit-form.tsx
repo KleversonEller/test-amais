@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import type React from 'react';
 import {useState} from 'react';
-import type {IUpdate} from '../interface/user-info';
 
-export const submitForm = (callback: any, stateInitial: IUpdate) => {
+import type {IUpdate} from '../interface/user-info';
+import type {INewResume, INewUser, IUser} from '../services/user-api';
+
+export const submitForm = (callback: any, stateInitial: IUpdate | INewUser | IUser | INewResume) => {
 	const [values, setValues] = useState(stateInitial);
 
 	const onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

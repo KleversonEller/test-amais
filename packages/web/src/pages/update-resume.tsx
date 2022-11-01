@@ -2,10 +2,12 @@ import React, {useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import {submitForm} from '../utils/submit-form';
-import {update, getUserAndResume} from '../services/user-api';
-
+import type {INewResume} from '../services/user-api';
+import {update, getUserAndResume, setNewResume} from '../services/user-api';
 import NavBar from '../components/nav-bar';
 import useStore from '../store';
+
+import type {IUpdate} from '../interface/user-info';
 
 function UpdateResume() {
 	const navigate = useNavigate();
@@ -25,7 +27,12 @@ function UpdateResume() {
 	};
 
 	const handleSave = async () => {
-		await update(values, resume.id);
+		if (resume) {
+			await update(values as IUpdate, resume.id);
+		} else {
+			await setNewResume(values as INewResume, token);
+		}
+
 		navigate('/');
 
 		const newResume = await getUserAndResume(token);
@@ -34,7 +41,7 @@ function UpdateResume() {
 
 	const {onChange, onSubmit, values} = submitForm(handleSave, {
 		cpf: resume?.cpf,
-		birthDate: resume?.birthDate,
+		birthDate: resume?.birthDate.replace(/(\d{4})(\d{2})(\d{2})/, '$3/$2/$1'),
 		sex: resume?.sex,
 		civilState: resume?.civilState,
 		schooling: resume?.schooling,
@@ -159,8 +166,7 @@ function UpdateResume() {
 					<label htmlFor='wage' />
                         *Pretensão Salarial:
 					<input
-						placeholder={Number(resume?.wage)
-							.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}
+						placeholder={resume?.wage}
 						onChange={onChange}
 						name='wage'
 						className='rounded drop-shadow-lg px-5 w-32 py-1 font-normal text-lg'
