@@ -15,6 +15,6 @@ const router = Router();
 
 router.post('/newResume', async (req, res) => controller.newResume(req, res));
 router.get('/getResume', async (req, res) => controller.getResume(req, res));
-router.patch('/updateResume', async (req, res) => controller.updateResume(req, res));
+router.patch('/updateResume/:id', async (req, res) => controller.updateResume(req, res));
 
 export default router;

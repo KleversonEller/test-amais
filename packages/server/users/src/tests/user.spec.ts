@@ -5,10 +5,6 @@ import {
 	mockLogin,
 	mockResume,
 	mockUser,
-	mockToken,
-	mockGetUser,
-	getUserAndResumeMock,
-	getUserMock,
 	loginMock,
 	newUserAndResumeMock,
 	newUserMock,
@@ -44,24 +40,5 @@ describe('Testando as regras de negocio para User', () => {
 
 		expect(mockL).toHaveBeenCalled();
 		expect(typeof result).toBe('string');
-	});
-
-	it('Verificando se a requisição das informações de um usuário é bem sucedida', async () => {
-		const mockUserGet = jest.spyOn(model, 'getUser').mockImplementation(getUserMock);
-
-		const result = await service.getUser(mockToken);
-
-		expect(mockUserGet).toHaveBeenCalled();
-		expect(result).toEqual(mockGetUser);
-	});
-
-	it('Verificando se a requisição das informações de um usuário e currículo é bem sucedida', async () => {
-		const mockUserAndResumeGet = jest.spyOn(model, 'getUserAndResume')
-			.mockImplementation(getUserAndResumeMock);
-
-		const result = await service.getUserAndResume(mockToken);
-
-		expect(mockUserAndResumeGet).toHaveBeenCalled();
-		expect(result).toEqual(mockGetUser);
 	});
 });

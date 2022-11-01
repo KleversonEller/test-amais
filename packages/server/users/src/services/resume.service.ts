@@ -52,12 +52,11 @@ export default class ResumeService {
 		return resume;
 	}
 
-	public async updateResume(data: IResume, token: string): Promise<Resume> {
+	public async updateResume(data: IResume, id: string): Promise<Resume> {
 		ResumeValidate.newResume(data);
-		UserValidate.getUser(token);
-		const decoded = Token.validateToken(token);
+		UserValidate.getUser(id);
 
-		const upResume = await this._model.updateResume(data, decoded);
+		const upResume = await this._model.updateResume(data, id);
 
 		return upResume;
 	}
