@@ -151,4 +151,21 @@ const setNewResume = async (data: INewResume, token: string): Promise<AxiosRespo
 	}
 };
 
-export {getLogin, setNewUserAndResume, getUserAndResume, update, setNewUser, setNewResume};
+const getAllInfos = async (): Promise<AxiosResponse | undefined> => {
+	try {
+		const allInfos = await axios.get(`${URL}getAllInfos`);
+		return allInfos;
+	} catch (error: unknown) {
+		return undefined;
+	}
+};
+
+export {
+	getLogin,
+	setNewUserAndResume,
+	getUserAndResume,
+	update,
+	setNewUser,
+	setNewResume,
+	getAllInfos,
+};
