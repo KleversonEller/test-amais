@@ -4,7 +4,7 @@ A pagina conta com uma área para administradores, onde é listado todos os curr
 <br />
 A aplicação foi construida utilizando React.js juntamente com Node.js e Typescript.
 <br />
-Logo abaixo segue toda a stack que foi utilizada na construção da aplicação.
+Logo abaixo segue todas as stack que foram utilizadas na construção da aplicação.
 <br />
 <br />
 
@@ -171,3 +171,4 @@ npx prisma studio
 Esse comando ira abrir uma interface do banco de dados no navegador.
 <br />
 <br />
+Para saber mais sobre a API veja sua <a href="https://documenter.getpostman.com/view/22008659/2s8YRjptSb" target="_blank" rel="external"><span><strong>Documentação.</strong></span></a>
