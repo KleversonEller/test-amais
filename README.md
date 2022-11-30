@@ -102,7 +102,7 @@ Voce pode conferir como instalar pela <a href="https://nodejs.org/en/" target="_
 Vamos começar clonado o repositório, para isso utilize o comando a seguir:
 
 ```sh
-git clone git@github.com:KleversonEller/test-amais.git
+git clone git@github.com:KleversonEller/Test-Amais.git
 ```
 <br />
 Após ter clonado o repositório entre na pasta raiz do projeto `./teste-amais` :
