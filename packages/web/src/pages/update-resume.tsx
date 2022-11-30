@@ -134,7 +134,7 @@ function UpdateResume() {
 					<input
 						placeholder={resume?.specialization}
 						onChange={onChange}
-						name='birthDate'
+						name='specialization'
 						className='rounded drop-shadow-lg px-5 py-1 font-normal text-lg'
 						type='text'
 					/>
