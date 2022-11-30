@@ -2,6 +2,35 @@
 A aplicação se trata de uma página para cadastro de currículo, o usuário pode criar uma conta, efetuar login, cadastrar e editar um currículo.
 A pagina conta com uma área para administradores, onde é listado todos os currículos cadastrados e faz um relatório visual da pretensão salarial dos usuários, alterando a cor do valor indicado pelo usuário conforme a média salarial entre todos os usuários.
 <br />
+<details>
+  <summary><strong>As seguintes regras de negocio foram utilizadas para a construção dessa aplicação</strong></summary><br />
+
+  *Quando entrar no sistema o usuário precisa ser direcionado para a página de cadastro de seu
+currículo. As informações a serem preenchidas são: Nome, E-mail, Login, Senha, CPF, Data de
+Nascimento, Sexo, Estado Civil, Escolaridade, Cursos/ Especializações, Experiência Profissional
+e pretensão salarial. Você precisa salvar na base de dados a data e hora que o currículo foi
+registrado no sistema.
+
+  *O usuário pode querer alterar seu próprio currículo outro dia. Para isso, desenvolva também
+uma página de login
+
+  *Após estar logado, ou ter completado o cadastro, o usuário poderá registrar ( ou alterar ) seu
+currículo no sistema.
+
+  *O cliente também precisa de um acesso a uma página que liste todos os currículos
+cadastrados. Esta página deve exibir na lista a "pretensão salarial”. Ao final da lista, em formato
+de relatório exibir a soma total de "pretensão salarial” de todos os candidatos e a média de
+pretensão salarial. O sistema deve pintar na lista os salários em verde que estão abaixo da
+média salarial e em Azul os que estão acima da média salarial.
+
+  *Após o envio do form do currículo mostrar uma mensagem de inserção ou alteração.
+
+  *Se o usuário já tiver um currículo registrado, permitir a alteração do mesmo ( mostrando
+os campos já cadastrados pelo usuário )
+
+  *Os campos de formato Data devem ser tratados na inserção/alteração. Lembrando que o usuário deve digitar “dia/mês/ano” e na base deve ficar salvo como “ano-mês-dia”.
+</details>
+<br />
 A aplicação foi construida utilizando React.js juntamente com Node.js e Typescript.
 <br />
 Logo abaixo segue todas as stack que foram utilizadas na construção da aplicação.
