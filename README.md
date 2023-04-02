@@ -2,6 +2,9 @@
 A aplicação se trata de uma página para cadastro de currículo, o usuário pode criar uma conta, efetuar login, cadastrar e editar um currículo.
 A pagina conta com uma área para administradores, onde é listado todos os currículos cadastrados e faz um relatório visual da pretensão salarial dos usuários, alterando a cor do valor indicado pelo usuário conforme a média salarial entre todos os usuários.
 <br />
+
+![img](packages/web/src/images/gif-amais.gif)
+<br />
 <details>
   <summary><strong>As seguintes regras de negocio foram utilizadas para a construção dessa aplicação</strong></summary><br />
 
@@ -125,26 +128,7 @@ npm install
 ```
 <br />
 
-Para rodar todos os testes da aplicação, na raiz do projeto `./teste-amais` execute o seguinte comando:
-
-```sh
-npm test
-```
-
-Isso ira executar os testes de cada aplicação de uma única vez.
-<br />
-Caso queira executar os teste separadamente pode utilizar o mesmo comando na raiz de cada aplicação.
-<br /><br />
-
 Para inicializar cada aplicação execute os seguintes comando em terminais diferentes:
-<br />
-
-**Pagina Web**
-
-```sh
-npm run dev:web
-```
-A pagina web ira rodar na `porta 5173` da sua máquina (http://localhost:5173/).
 <br />
 
 **API de Usuários**
@@ -201,3 +185,24 @@ Esse comando ira abrir uma interface do banco de dados no navegador.
 <br />
 <br />
 Para saber mais sobre a API veja sua <a href="https://documenter.getpostman.com/view/22008659/2s8YRjptSb" target="_blank" rel="external"><span><strong>Documentação.</strong></span></a>
+<br /> <br />
+
+**Pagina Web**
+
+```sh
+npm run dev:web
+```
+A pagina web ira rodar na `porta 5173` da sua máquina (http://localhost:5173/).
+<br />
+<br />
+
+Para rodar todos os testes da aplicação, na raiz do projeto `./teste-amais` execute o seguinte comando:
+
+```sh
+npm test
+```
+
+Isso ira executar os testes de cada aplicação de uma única vez.
+<br />
+Caso queira executar os teste separadamente pode utilizar o mesmo comando na raiz de cada aplicação.
+<br /><br />
